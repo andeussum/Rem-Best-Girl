@@ -123,7 +123,7 @@ public static class Program
 
         HalfOfMapLength = side / 2;
 
-        RangeCoords = HalfOfMapLength + a; // This turns a -64 to 63 range into 0 to 127 range coordinates
+        RangeCoords = HalfOfMapLength + (a + ((side / -2) + 64)); // This turns a -64 to 63 range into 0 to 127 range coordinates
 
         MapGridPosition = (int)Math.Floor((double)RangeCoords / side); // This gives the position of the imaginary map grid
 
